@@ -22,7 +22,9 @@ func main() {
   fmt.Println(falsy) // => false
 }
 
-func ArePerm(word1 string, word2 string) bool {
+func ArePerm(word1, word2 string) bool {
+  if len(word1) != len(word2) { return false }
+
   sorted1 := LowerAndSort(word1)
   sorted2 := LowerAndSort(word2)
 
